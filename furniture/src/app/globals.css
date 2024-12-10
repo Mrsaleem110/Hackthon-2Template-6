@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------- NAVBAR ----------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar .head {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .icons {
+  display: flex;
+  gap: 2rem;
+}
+
+/* ---------------------- HERO SECTION ----------------------------- */
+.heroText {
+  width: 34rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  padding: 4rem;
+  line-height: 2rem;
+  transform: translate(-50%, -50%); /* Center the element */
+}
+
+.heroText h6 {
+  font-weight: bold;
+}
+
+.heroText h3 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #b88e2f;
+}
+
+.heroText .buyBtn {
+  background-color: #b88e2f;
+  padding: 0.5rem 3rem;
+  color: white;
+}
+
+/* ---------------------------- SUB TEXT ---------------------------- */
+.subText {
+  text-align: center;
+}
+
+.subText h3 {
+  color: #292826;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.imgArea { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.imgArea h6 {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ------------------- CARD SECTION ---------------------------- */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);    
+  gap: 0.1rem; 
+  padding: 20px; 
+  justify-items: center;
+}
+
+.productBtn {
+  align-self: center;
+}
+
+.slideSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);    
+  padding: 2rem; 
+  justify-items: center;
+}
+
+/* ------------------------------ SHOP Routing ---------------------------- */
+.shopsect h3, .shopPara {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.shopsect .shopPara {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.footer input {
+  outline: none;
+}
+
+footer hr {
+  margin: auto;
+  margin-top: 15px;
+  width: 1000px;
+}
+
+footer .para p {
+  font-weight: 400;
+  position: absolute;
+  left: 13%;
+  padding: 2rem 0rem;
+}
+
+/* ---------------------------- RESPONSIVE STYLES ------------------------- */
+
+/* Mobile screens */
+@media screen and (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .heroText {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .heroText h3 {
+    font-size: 1.8rem;
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+
+  .slideSection {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .para p {
+    left: 0;
+    text-align: center;
+  }
+
+  /* Adjust shop section */
+  .shopsect h3, .shopPara {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+}
+
+/* Tablet screens */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .heroText {
+    width: 50%;
+    padding: 3rem;
+  }
+
+  .heroText h3 {
+    font-size: 2rem;
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+  }
+
+  .slideSection {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+}
+
+/* Desktop screens */
+@media screen and (min-width: 1025px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .heroText {
+    width: 40%;
+    padding: 4rem;
+  }
+
+  .heroText h3 {
+    font-size: 2.5rem;
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+  }
+
+  .slideSection {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+}
