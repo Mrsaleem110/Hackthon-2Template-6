@@ -1,4 +1,4 @@
-// import Image from "next/image";
+ import Image from "next/image";
 // import Bedroom from "../public/bedroom.png"
 export default function Products(){
 
@@ -85,7 +85,7 @@ export default function Products(){
                   src={card.image}
                   style={{ width: "18rem", height: "18rem" }}
                   className="card-img-top"
-                //   alt={card.title}
+                   alt={card.description}
                 />
                 <div className="card-body">
                   <h5 className="card-title" style={{ fontWeight: "bold" }}>
